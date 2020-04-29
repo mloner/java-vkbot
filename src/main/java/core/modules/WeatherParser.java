@@ -8,7 +8,7 @@ import org.jsoup.select.Elements;
 import java.io.IOException;
 
 /**
- * Парсер погоды
+ * РџР°СЂСЃРµСЂ РїРѕРіРѕРґС‹
  *
  * @version 1.0.0
  * @author Arthur Kupriyanov
@@ -27,7 +27,7 @@ public class WeatherParser {
 
     public String getWeatherTodayDescription() {
         Elements elements = doc.select("span.dw-into");
-        return elements.text().split("Подробнее")[0];
+        return elements.text().split("РџРѕРґСЂРѕР±РЅРµРµ")[0];
     }
 
 }

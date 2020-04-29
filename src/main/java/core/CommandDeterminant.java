@@ -6,9 +6,9 @@ import core.commands.Unknown;
 import java.util.Collection;
 
 /**
- * Определяет команду
+ * СњРїСЂРµРґРµР»В¤РµС‚ РєРѕРјР°РЅРґСѓ
  *
- * @author Артур Куприянов
+ * @author ССЂС‚СѓСЂ В СѓРїСЂРёВ¤РЅРѕРІ
  * @version 1.1.0
  */
 public class CommandDeterminant {

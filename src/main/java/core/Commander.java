@@ -5,8 +5,8 @@ import com.vk.api.sdk.objects.messages.Message;
 public class Commander {
 
     /**
-     * Обработка сообщений, получаемых через сервис Вконтакте. Имеет ряд дополнительной информации.
-     * @param message сообщение (запрос) пользователя
+     * СњР±СЂР°Р±РѕС‚РєР° СЃРѕРѕР±С‰РµРЅРёР№, РїРѕР»СѓС‡Р°РµРјС‹С… С‡РµСЂРµР· СЃРµСЂРІРёСЃ В¬РєРѕРЅС‚Р°РєС‚Рµ. В»РјРµРµС‚ СЂВ¤Рґ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅРѕР№ РёРЅС„РѕСЂРјР°С†РёРё.
+     * @param message СЃРѕРѕР±С‰РµРЅРёРµ (Р·Р°РїСЂРѕСЃ) РїРѕР»СЊР·РѕРІР°С‚РµР»В¤
      */
     public static void execute(Message message){
         CommandDeterminant.getCommand(CommandManager.getCommands(), message).exec(message);

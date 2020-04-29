@@ -1,11 +1,11 @@
-﻿package common;
+package common;
 
 import java.text.SimpleDateFormat;
 
 /**
- * Для работа с датой и временем
+ * ƒл¤ работа с датой и временем
  *
- * @author Артур Куприянов
+ * @author јртур  упри¤нов
  * @version 1.0.0
  */
 public class Date {

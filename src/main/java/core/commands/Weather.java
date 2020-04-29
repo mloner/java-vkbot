@@ -32,7 +32,7 @@ public class Weather extends Command implements ServiceCommand {
         try {
             weather = new WeatherParser().getWeatherTodayDescription();
         } catch (IOException e) {
-            weather = "не удалось получить погоду";
+            weather = "РЅРµ СѓРґР°Р»РѕСЃСЊ РїРѕР»СѓС‡РёС‚СЊ РїРѕРіРѕРґСѓ";
         }
 
         return weather;
