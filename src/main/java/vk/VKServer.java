@@ -31,9 +31,9 @@ public class VKServer {
                     exec.execute(new Messenger(message));
                 }
             } catch (ClientException e) {
-                System.out.println("Возникли проблемы");
+                System.out.println("Р’РѕР·РЅРёРєР»Рё РїСЂРѕР±Р»РµРјС‹");
                 final int RECONNECT_TIME = 10000;
-                System.out.println("Повторное соединение через " + RECONNECT_TIME / 1000 + " секунд");
+                System.out.println("РџРѕРІС‚РѕСЂРЅРѕРµ СЃРѕРµРґРёРЅРµРЅРёРµ С‡РµСЂРµР· " + RECONNECT_TIME / 1000 + " СЃРµРєСѓРЅРґ");
                 Thread.sleep(RECONNECT_TIME);
 
             }

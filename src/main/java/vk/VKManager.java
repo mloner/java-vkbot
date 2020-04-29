@@ -36,9 +36,9 @@ public class VKManager {
     }
 
     /**
-     * Обращается к VK API и получает объект, описывающий пользователя.
-     * @param id идентификатор пользователя в VK
-     * @return {@link UserXtrCounters} информацию о пользователе
+     * РћР±СЂР°С‰Р°РµС‚СЃСЏ Рє VK API Рё РїРѕР»СѓС‡Р°РµС‚ РѕР±СЉРµРєС‚, РѕРїРёСЃС‹РІР°СЋС‰РёР№ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ.
+     * @param id РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ РІ VK
+     * @return {@link UserXtrCounters} РёРЅС„РѕСЂРјР°С†РёСЋ Рѕ РїРѕР»СЊР·РѕРІР°С‚РµР»Рµ
      * @see UserXtrCounters
      */
     public static UserXtrCounters getUserInfo(int id){
