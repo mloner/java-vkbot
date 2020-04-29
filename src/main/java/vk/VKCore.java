@@ -25,7 +25,7 @@ public class VKCore {
         TransportClient transportClient = HttpTransportClient.getInstance();
         vk = new VkApiClient(transportClient);
 
-        // Çàãðóçêà êîíôèãóðàöèé
+        // Ð—Ð°Ð³Ñ€ÑƒÐ·ÐºÐ° ÐºÐ¾Ð½Ñ„Ð¸Ð³ÑƒÑ€Ð°Ñ†Ð¸Ð¹
 
         Properties prop = new Properties();
         int groupId;
@@ -39,7 +39,7 @@ public class VKCore {
             ts = vk.messages().getLongPollServer(actor).execute().getTs();
         } catch (IOException e) {
             e.printStackTrace();
-            System.out.println("Îøèáêà ïðè çàãðóçêå ôàéëà êîíôèãóðàöèè");
+            System.out.println("ÐžÑˆÐ¸Ð±ÐºÐ° Ð¿Ñ€Ð¸ Ð·Ð°Ð³Ñ€ÑƒÐ·ÐºÐµ Ñ„Ð°Ð¹Ð»Ð° ÐºÐ¾Ð½Ñ„Ð¸Ð³ÑƒÑ€Ð°Ñ†Ð¸Ð¸");
         }
 
 
@@ -79,9 +79,9 @@ public class VKCore {
         if (!messages.isEmpty() && !messages.get(0).isOut()) {
 
                 /*
-                messageId - ìàêñèìàëüíî ïîëó÷åííûé ID, íóæåí, ÷òîáû íå áûëî îøèáêè 10 internal server error,
-                êîòîðûé ÿâëÿåòñÿ îãðàíè÷åíèåì â API VK. Â ñëó÷àå, åñëè ts ñëèøêîì ñòàðûé (áîëüøå ñóòîê),
-                à max_msg_id íå ïåðåäàí, ìåòîä ìîæåò âåðíóòü îøèáêó 10 (Internal server error).
+                messageId - Ð¼Ð°ÐºÑÐ¸Ð¼Ð°Ð»ÑŒÐ½Ð¾ Ð¿Ð¾Ð»ÑƒÑ‡ÐµÐ½Ð½Ñ‹Ð¹ ID, Ð½ÑƒÐ¶ÐµÐ½, Ñ‡Ñ‚Ð¾Ð±Ñ‹ Ð½Ðµ Ð±Ñ‹Ð»Ð¾ Ð¾ÑˆÐ¸Ð±ÐºÐ¸ 10 internal server error,
+                ÐºÐ¾Ñ‚Ð¾Ñ€Ñ‹Ð¹ ÑÐ²Ð»ÑÐµÑ‚ÑÑ Ð¾Ð³Ñ€Ð°Ð½Ð¸Ñ‡ÐµÐ½Ð¸ÐµÐ¼ Ð² API VK. Ð’ ÑÐ»ÑƒÑ‡Ð°Ðµ, ÐµÑÐ»Ð¸ ts ÑÐ»Ð¸ÑˆÐºÐ¾Ð¼ ÑÑ‚Ð°Ñ€Ñ‹Ð¹ (Ð±Ð¾Ð»ÑŒÑˆÐµ ÑÑƒÑ‚Ð¾Ðº),
+                Ð° max_msg_id Ð½Ðµ Ð¿ÐµÑ€ÐµÐ´Ð°Ð½, Ð¼ÐµÑ‚Ð¾Ð´ Ð¼Ð¾Ð¶ÐµÑ‚ Ð²ÐµÑ€Ð½ÑƒÑ‚ÑŒ Ð¾ÑˆÐ¸Ð±ÐºÑƒ 10 (Internal server error).
                  */
             int messageId = messages.get(0).getId();
             if (messageId > maxMsgId){
