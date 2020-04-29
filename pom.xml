@@ -21,18 +21,16 @@
 		      </configuration>
 		    </plugin>
 		    <plugin>
+		    	<configuration>
+				  <appName>vkbotmloner</appName>
+				  <processTypes>
+				     <web>java $JAVA_OPTS -cp target/classes:target/dependency/* vk.VKServer</web>
+				  </processTypes>
+				</configuration>
 		        <groupId>com.heroku.sdk</groupId>
 		        <artifactId>heroku-maven-plugin</artifactId>
-		        <version>2.0.8</version>
-		        <configuration>
-		            <appName>vkbotmloner</appName>
-		            <processTypes>
-		                <worker>
-		                    java $JAVA_OPTS -cp target/classes:target/dependency/* vk.VKServer
-		                </worker>
-		            </processTypes>
-		        </configuration>
-		    </plugin>
+		        <version>3.0.2</version>
+	     	</plugin>
 			
         </plugins>
     </build>
