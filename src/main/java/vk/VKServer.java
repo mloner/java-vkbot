@@ -36,8 +36,6 @@ public class VKServer {
                 final int RECONNECT_TIME = 10000;
                 System.out.println("Повторное соединение через " + RECONNECT_TIME / 1000 + " секунд");
                 Thread.sleep(RECONNECT_TIME);
-            } catch(ApiException e) {
-            	System.out.println("Blyad. Api exception");
             }
         }
     }
