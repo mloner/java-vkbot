@@ -17,8 +17,7 @@ public class Weather extends Command implements ServiceCommand {
 
     @Override
     public void exec(Message message) {
-
-
+    	super.exec(message);
         new VKManager().sendMessage(getWeather(), message.getUserId());
     }
 
@@ -32,7 +31,7 @@ public class Weather extends Command implements ServiceCommand {
         try {
             weather = new WeatherParser().getWeatherTodayDescription();
         } catch (IOException e) {
-            weather = "не удалось получить погоду";
+            weather = "Не удалось получить погоду";
         }
 
         return weather;

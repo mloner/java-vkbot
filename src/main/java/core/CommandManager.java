@@ -1,5 +1,6 @@
 package core;
 
+import core.commands.GreenText;
 import core.commands.Unknown;
 import core.commands.Weather;
 
@@ -14,7 +15,7 @@ public class CommandManager {
     static {
         commands.add(new Unknown("unknown"));
         commands.add(new Weather("погода"));
-
+        commands.add(new GreenText("greentext"));
     }
 
     public static HashSet<Command> getCommands(){

