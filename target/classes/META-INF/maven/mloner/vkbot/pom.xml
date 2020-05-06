@@ -20,14 +20,6 @@
 		        <encoding>UTF-8</encoding>
 		      </configuration>
 		    </plugin>
-		    <!-- <plugin>
-		    	<configuration>
-				  <appName>vkbotmloner</appName>
-				</configuration>
-		        <groupId>com.heroku.sdk</groupId>
-		        <artifactId>heroku-maven-plugin</artifactId>
-		        <version>3.0.2</version>
-	     	</plugin>-->
 			<plugin>
 	           <groupId>org.apache.maven.plugins</groupId>
 	           <artifactId>maven-dependency-plugin</artifactId>

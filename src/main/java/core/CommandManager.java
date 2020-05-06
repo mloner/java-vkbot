@@ -13,7 +13,7 @@ public class CommandManager {
 
     static {
         commands.add(new Unknown("unknown"));
-        commands.add(new Weather("weather"));
+        commands.add(new Weather("погода"));
 
     }
 

@@ -13,7 +13,7 @@ import java.util.Collection;
  */
 public class CommandDeterminant {
 
-
+	
     public static Command getCommand(Collection<Command> commands, Message message) {
         String body = message.getBody();
 

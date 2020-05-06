@@ -14,7 +14,7 @@ import java.io.IOException;
  * @author Arthur Kupriyanov
  */
 public class WeatherParser {
-    private String city = "saint_petersburg";
+    private String city = "volgograd";
     private Document doc;
     public WeatherParser() throws IOException {
         doc = Jsoup.connect(String.format("https://world-weather.ru/pogoda/russia/%s/",city)).get();
