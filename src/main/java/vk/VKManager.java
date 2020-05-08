@@ -5,9 +5,6 @@ import com.vk.api.sdk.exceptions.ClientException;
 import com.vk.api.sdk.objects.users.UserXtrCounters;
 import com.vk.api.sdk.queries.messages.MessagesSendQuery;
 
-/**
- * @author Arthur Kupriyanov
- */
 public class VKManager {
     public static VKCore vkCore;
 
@@ -35,19 +32,13 @@ public class VKManager {
         return vkCore.getVk().messages().send(vkCore.getActor());
     }
 
-    /**
-     * Обращается к VK API и получает объект, описывающий пользователя.
-     * @param id идентификатор пользователя в VK
-     * @return {@link UserXtrCounters} информацию о пользователе
-     * @see UserXtrCounters
-     */
     public static UserXtrCounters getUserInfo(int id){
         try {
             return vkCore.getVk().users()
-                    .get(vkCore.getActor())
-                    .userIds(String.valueOf(id))
-                    .execute()
-                    .get(0);
+			                     .get(vkCore.getActor())
+			                     .userIds(String.valueOf(id))
+			                     .execute()
+			                     .get(0);
         } catch (ApiException | ClientException e) {
             e.printStackTrace();
         }

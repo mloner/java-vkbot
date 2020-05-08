@@ -15,5 +15,4 @@ public class Messenger implements Runnable{
     public void run() {
         Commander.execute(message);
     }
-
 }

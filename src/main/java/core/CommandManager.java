@@ -6,9 +6,6 @@ import core.commands.Weather;
 
 import java.util.HashSet;
 
-/**
- * @author Arthur Kupriyanov
- */
 public class CommandManager {
     private static HashSet<Command> commands = new HashSet<>();
 

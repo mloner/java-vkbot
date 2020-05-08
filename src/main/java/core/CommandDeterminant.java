@@ -7,12 +7,6 @@ import core.commands.Unknown;
 
 import java.util.Collection;
 
-/**
- * ќпредел¤ет команду
- *
- * @author јртур  упри¤нов
- * @version 1.1.0
- */
 public class CommandDeterminant {
 
 	

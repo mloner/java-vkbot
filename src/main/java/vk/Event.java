@@ -7,9 +7,6 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.HashSet;
 
-/**
- * @author Arthur Kupriyanov
- */
 public class Event {
 
     private int dayOfWeek = Calendar.getInstance().get(Calendar.DAY_OF_WEEK);
@@ -17,7 +14,6 @@ public class Event {
     private static HashMap<String, Integer> timeLockList = new HashMap<>();
 
     public void handlePerDay(){
-
         for(String time : timedCommands.keySet()) {
             if (!isTimeLocked(time)) {
                 if (Date.getTimeNow().equals(time)) {

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>      
+  <session-factory>
+    <!-- Database connection settings -->
+    <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="connection.url">jdbc:mysql://sql7.freemysqlhosting.net:3306/sql7329708</property>
+    <property name="connection.username">sql7329708</property>
+    <property name="connection.password">PnF9s9GwVP</property>
+    <property name="show_sql">true</property>
+        
+    <mapping class="domain.User" />
+	
+     
+  </session-factory>
+</hibernate-configuration>

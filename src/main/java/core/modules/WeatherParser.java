@@ -7,12 +7,6 @@ import org.jsoup.select.Elements;
 
 import java.io.IOException;
 
-/**
- * Парсер погоды
- *
- * @version 1.0.0
- * @author Arthur Kupriyanov
- */
 public class WeatherParser {
     private String city = "volgograd";
     private Document doc;

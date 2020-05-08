@@ -24,9 +24,7 @@ public class VKCore {
 
         TransportClient transportClient = HttpTransportClient.getInstance();
         vk = new VkApiClient(transportClient);
-
-        // Загрузка конфигураций
-
+        // Загрузка конфигурации
         Properties prop = new Properties();
         int groupId;
         String access_token;
@@ -54,17 +52,16 @@ public class VKCore {
         return vk;
     }
     public Message getMessage() throws ClientException, ApiException {
-
         MessagesGetLongPollHistoryQuery eventsQuery = vk.messages()
-													                .getLongPollHistory(actor)
-													                .ts(ts);
+										                .getLongPollHistory(actor)
+										                .ts(ts);
         if (maxMsgId > 0){
             eventsQuery.maxMsgId(maxMsgId);
         }
         List<Message> messages = eventsQuery
-                .execute()
-                .getMessages()
-                .getMessages();
+				                .execute()
+				                .getMessages()
+				                .getMessages();
 
         if (!messages.isEmpty()){
             try {
@@ -77,12 +74,6 @@ public class VKCore {
             }
         }
         if (!messages.isEmpty() && !messages.get(0).isOut()) {
-
-                /*
-                messageId - максимально полученный ID, нужен, чтобы не было ошибки 10 internal server error,
-                который является ограничением в API VK. В случае, если ts слишком старый (больше суток),
-                а max_msg_id не передан, метод может вернуть ошибку 10 (Internal server error).
-                 */
             int messageId = messages.get(0).getId();
             if (messageId > maxMsgId){
                 maxMsgId = messageId;

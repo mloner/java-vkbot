@@ -2,12 +2,6 @@ package common;
 
 import java.text.SimpleDateFormat;
 
-/**
- * ƒл¤ работа с датой и временем
- *
- * @author јртур  упри¤нов
- * @version 1.0.0
- */
 public class Date {
 
     public static String getDate(){

@@ -7,9 +7,6 @@ import vk.VKManager;
 
 import java.io.IOException;
 
-/**
- * @author Arthur Kupriyanov
- */
 public class Weather extends Command implements ServiceCommand {
     public Weather(String name) {
         super(name);
